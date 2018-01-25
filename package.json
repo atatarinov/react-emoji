@@ -12,6 +12,8 @@
   "author": "Alex Tatarinov",
   "license": "ISC",
   "dependencies": {
+    "emoji-js": "^3.4.0",
+    "emoji-picker-react": "^2.0.1",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
     "react": "^16.2.0",
