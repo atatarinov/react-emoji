@@ -7,9 +7,8 @@ const path = require('path');
 const morgan = require('morgan');
 app.use(morgan('dev'));
 
-// const { resolve } = require('path');
-// app.use(express.static(resolve(__dirname, '..', 'public')));
-// app.get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', 'public', 'index.html')));
+const { resolve } = require('path');
+app.use(express.static(resolve(__dirname, '..', 'public')));
 
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../public/index.html'));
