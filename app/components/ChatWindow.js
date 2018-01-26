@@ -14,7 +14,8 @@ jsemoji.img_sets.emojione.path = 'https://cdn.jsdelivr.net/emojione/assets/3.0/p
 export default class ChatWindow extends Component {
   state = {
     items: [],
-    text: ''
+    text: '',
+    emojiShown: false
   };
 
   handleChange = (event) => {
@@ -40,23 +41,46 @@ export default class ChatWindow extends Component {
     });
   }
 
+  toogleEmojiState = () => {
+    this.setState({
+      emojiShown: !this.state.emojiShown
+    });
+  }
+
   render() {
     const { items, text } = this.state;
 
-    return (
-      <div className="container">
-        <h1 id="title-main">Emoji Chat App</h1>
-        <ChatItem
-          items={items}
-        />
-        <form onSubmit={this.handleSubmit}>
-          <input className="input" onChange={this.handleChange} value={text} placeholder="Type your text..." />
-          <button className="submit">{'Send'}</button>
-        </form>
-        <div className="emoji-table">
-          <EmojiPicker onEmojiClick={this.handleEmojiClick} />
+    if (this.state.emojiShown === true) {
+      return (
+        <div className="container">
+          <h1 id="title-main">Welcome to the Simple Chat App</h1>
+          <ChatItem
+            items={items}
+          />
+          <form onSubmit={this.handleSubmit}>
+            <input className="input" onChange={this.handleChange} value={text} placeholder="Type your text..." />
+            <button className="submit">{'Send'}</button>
+          </form>
+          <button className="show-emoji" onClick={this.toogleEmojiState}>{'Emoji'}</button>
+          <div className="emoji-table">
+            <EmojiPicker onEmojiClick={this.handleEmojiClick} />
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div className="container">
+          <h1 id="title-main">Welcome to the Simple Chat App</h1>
+          <ChatItem
+            items={items}
+          />
+          <form onSubmit={this.handleSubmit}>
+            <input className="input" onChange={this.handleChange} value={text} placeholder="Type your text..." />
+            <button className="submit">{'Send'}</button>
+          </form>
+          <button className="show-emoji" onClick={this.toogleEmojiState}>{'Emoji'}</button>
+        </div>
+      );
+    }
   }
 }
