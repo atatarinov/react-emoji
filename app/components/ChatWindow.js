@@ -3,6 +3,8 @@ import EmojiPicker from 'emoji-picker-react';
 import JSEMOJI from 'emoji-js';
 
 import ChatItem from './ChatItem';
+import StateWithEmoji from './StateWithEmoji';
+import StateWithoutEmoji from './StateWithoutEmoji';
 
 //emoji set up
 let jsemoji = new JSEMOJI();
@@ -50,36 +52,27 @@ export default class ChatWindow extends Component {
   render() {
     const { items, text } = this.state;
 
-    if (this.state.emojiShown === true) {
+    if (this.state.emojiShown) {
       return (
-        <div className="container">
-          <h1 id="title-main">Welcome to the Simple Chat App</h1>
-          <ChatItem
-            items={items}
-          />
-          <form onSubmit={this.handleSubmit}>
-            <input className="input" onChange={this.handleChange} value={text} placeholder="Type your text..." />
-            <button className="submit">{'Send'}</button>
-          </form>
-          <button className="show-emoji" onClick={this.toogleEmojiState}>{'Emoji'}</button>
-          <div className="emoji-table">
-            <EmojiPicker onEmojiClick={this.handleEmojiClick} />
-          </div>
-        </div>
+        <StateWithEmoji
+          text={text}
+          items={items}
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+          toogleEmojiState={this.toogleEmojiState}
+          handleEmojiClick={this.handleEmojiClick}
+        />
       );
     } else {
       return (
-        <div className="container">
-          <h1 id="title-main">Welcome to the Simple Chat App</h1>
-          <ChatItem
-            items={items}
-          />
-          <form onSubmit={this.handleSubmit}>
-            <input className="input" onChange={this.handleChange} value={text} placeholder="Type your text..." />
-            <button className="submit">{'Send'}</button>
-          </form>
-          <button className="show-emoji" onClick={this.toogleEmojiState}>{'Emoji'}</button>
-        </div>
+        <StateWithoutEmoji
+          text={text}
+          items={items}
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+          toogleEmojiState={this.toogleEmojiState}
+        />
+
       );
     }
   }
