@@ -26,6 +26,8 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "file-loader": "^1.1.6",
+    "url-loader": "^0.6.2",
     "webpack": "^3.10.0"
   }
 }

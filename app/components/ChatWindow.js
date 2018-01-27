@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import EmojiPicker from 'emoji-picker-react';
+
 import JSEMOJI from 'emoji-js';
 
-import ChatItem from './ChatItem';
 import StateWithEmoji from './StateWithEmoji';
 import StateWithoutEmoji from './StateWithoutEmoji';
 
@@ -39,7 +38,7 @@ export default class ChatWindow extends Component {
   handleEmojiClick = (n, e) => {
     let emoji = jsemoji.replace_colons(`:${e.name}:`);
     this.setState({
-      text: this.state.text + emoji
+    text: this.state.text + emoji
     });
   }
 
@@ -54,25 +53,34 @@ export default class ChatWindow extends Component {
 
     if (this.state.emojiShown) {
       return (
-        <StateWithEmoji
-          text={text}
-          items={items}
-          handleSubmit={this.handleSubmit}
-          handleChange={this.handleChange}
-          toogleEmojiState={this.toogleEmojiState}
-          handleEmojiClick={this.handleEmojiClick}
-        />
+        <div className="main-container">
+          <div className="sidebar">
+            <h3># Sample App</h3>
+          </div>
+          <StateWithEmoji
+            text={text}
+            items={items}
+            handleSubmit={this.handleSubmit}
+            handleChange={this.handleChange}
+            toogleEmojiState={this.toogleEmojiState}
+            handleEmojiClick={this.handleEmojiClick}
+          />
+        </div>
       );
     } else {
       return (
-        <StateWithoutEmoji
-          text={text}
-          items={items}
-          handleSubmit={this.handleSubmit}
-          handleChange={this.handleChange}
-          toogleEmojiState={this.toogleEmojiState}
-        />
-
+        <div className="main-container">
+          <div className="sidebar">
+            <h3># Sample App</h3>
+          </div>
+          <StateWithoutEmoji
+            text={text}
+            items={items}
+            handleSubmit={this.handleSubmit}
+            handleChange={this.handleChange}
+            toogleEmojiState={this.toogleEmojiState}
+          />
+        </div>
       );
     }
   }

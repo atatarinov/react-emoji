@@ -1,7 +1,7 @@
 import React from 'react';
 import EmojiPicker from 'emoji-picker-react';
 
-import ChatItem from './ChatItem';
+import Message from './Message';
 import WelcomeTitle from './WelcomeTitle';
 
 export default function StateWithEmoji(props) {
@@ -11,9 +11,11 @@ export default function StateWithEmoji(props) {
   return (
     <div className="container">
       <WelcomeTitle />
-      <ChatItem
-        items={items}
-      />
+      <div className="messages">
+        <Message
+          items={items}
+        />
+      </div>
       <form onSubmit={handleSubmit}>
         <input className="input" onChange={handleChange} value={text} placeholder="Type your text..." />
         <button className="submit">{'Send'}</button>

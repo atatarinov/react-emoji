@@ -27,7 +27,8 @@ module.exports = {
         query: {
           presets: ['env', 'stage-0', 'react']
         }
-      }
+      },
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
     ]
   }
 };
