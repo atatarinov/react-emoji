@@ -21,8 +21,9 @@ export default function StateWithEmoji(props) {
           <input className="input" onChange={handleChange} value={text} placeholder="Type your text..." />
           <button className="submit">{'Send'}</button>
         </form>
+
+        <span id="show-emoji-no" onClick={toogleEmojiState}>{'😎'}</span>
       </div>
-      <span id="show-emoji-no" onClick={toogleEmojiState}>{'😎'}</span>
     </div>
   );
 }

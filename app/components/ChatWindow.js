@@ -65,7 +65,11 @@ export default class ChatWindow extends Component {
             toogleEmojiState={this.toogleEmojiState}
             handleEmojiClick={this.handleEmojiClick}
           />
-          <div className="files" />
+          <div className="files">
+            <h4>File #1</h4>
+            <h4>File #2</h4>
+            <h4>File #3</h4>
+          </div>
         </div>
       );
     } else {
@@ -81,7 +85,11 @@ export default class ChatWindow extends Component {
             handleChange={this.handleChange}
             toogleEmojiState={this.toogleEmojiState}
           />
-          <div className="files" />
+          <div className="files">
+            <h4>File #1</h4>
+            <h4>File #2</h4>
+            <h4>File #3</h4>
+          </div>
         </div>
       );
     }

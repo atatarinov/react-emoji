@@ -16,13 +16,16 @@ export default function StateWithEmoji(props) {
           items={items}
         />
       </div>
-      <form onSubmit={handleSubmit}>
-        <input className="input" onChange={handleChange} value={text} placeholder="Type your text..." />
-        <button className="submit">{'Send'}</button>
-      </form>
-      <span id="show-emoji-yes" onClick={toogleEmojiState}>{'😎'}</span>
-      <div className="emoji-table">
-        <EmojiPicker onEmojiClick={handleEmojiClick} />
+
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <input className="input" onChange={handleChange} value={text} placeholder="Type your text..." />
+          <button className="submit">{'Send'}</button>
+        </form>
+        <span id="show-emoji-yes" onClick={toogleEmojiState}>{'😎'}</span>
+        <div className="emoji-table">
+          <EmojiPicker onEmojiClick={handleEmojiClick} />
+        </div>
       </div>
     </div>
   );
