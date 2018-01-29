@@ -20,7 +20,7 @@ export default function StateWithEmoji(props) {
         <input className="input" onChange={handleChange} value={text} placeholder="Type your text..." />
         <button className="submit">{'Send'}</button>
       </form>
-      <button className="show-emoji" onClick={toogleEmojiState}>{'Emoji'}</button>
+      <span id="show-emoji-yes" onClick={toogleEmojiState}>{'😎'}</span>
       <div className="emoji-table">
         <EmojiPicker onEmojiClick={handleEmojiClick} />
       </div>

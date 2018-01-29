@@ -15,13 +15,14 @@ export default function StateWithEmoji(props) {
           items={items}
         />
       </div>
+
       <div className="form">
         <form onSubmit={handleSubmit}>
           <input className="input" onChange={handleChange} value={text} placeholder="Type your text..." />
           <button className="submit">{'Send'}</button>
         </form>
       </div>
-      <button className="show-emoji" onClick={toogleEmojiState}>{'Emoji'}</button>
+      <span id="show-emoji-no" onClick={toogleEmojiState}>{'😎'}</span>
     </div>
   );
 }

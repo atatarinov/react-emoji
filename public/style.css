@@ -1,5 +1,4 @@
 body {
-  background-color: lightcyan;
   padding: 0;
   margin: 0;
 }
@@ -29,20 +28,48 @@ ul {
   opacity: 0.9;
 }
 
-.container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  background: #FFFFFF;
+.files {
+  flex: 0 0 300px;
+  height: 100vh;
+  border-left: 0.5px solid lightgray;
 }
 
+.container {
+  flex-grow: 1;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
 .form {
+  position: fixed;
+  bottom: 2%;
+  width: 90%;
 }
 
 .input {
   font-size: 17px;
   outline: none;
-  /* color: lightgrey; */
+  margin-left: 10px;
+  width: 60%;
+  height: 30px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+}
+
+.submit {
+  width: 60px;
+  height: 34px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 3px;
+  text-align: center;
+  outline: none;
+  color: lightgray;
+}
+
+.submit:hover {
+  color: grey;
 }
 
 #main-title {
@@ -50,16 +77,42 @@ ul {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#show-emoji-no {
+  font-size: 25px;
+  opacity: 0.5;
+  width: 30px;
+  position: fixed;
+  bottom: 2%;
+  margin-left: 53%;
+}
+
+#show-emoji-no:hover {
+  font-size: 28px;
+  opacity: 0.9;
+  transition-duration: 10ms;
+}
+
+#show-emoji-yes {
+  font-size: 25px;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 2%;
+  margin-left: 53%;
+}
+
 .messages {
-  flex-grow: 1;
+  display: flex;
 }
 
 .message {
   display: flex;
-  /* background: #F5F5F5; */
   border-radius: 1px;
   margin: 10px;
   padding-left:10px;
+  width: 400px;
+  font-family: Consolas,monaco,"Ubuntu Mono",courier,monospace!important;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .message-body {
@@ -72,3 +125,20 @@ ul {
   height: 60px;
   border-radius: 5px;
 }
+
+.emoji-table {
+  position: fixed;
+  top: 10%;
+}
+
+/* @media(max-width: 992px) {
+  .container { width: 700px; }
+}
+
+@media(max-width: 768px) {
+  .container { width: 500px; }
+}
+
+@media(max-width: 480px) {
+  .container { width: 350px; }
+} */

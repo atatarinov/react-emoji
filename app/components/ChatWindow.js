@@ -65,6 +65,7 @@ export default class ChatWindow extends Component {
             toogleEmojiState={this.toogleEmojiState}
             handleEmojiClick={this.handleEmojiClick}
           />
+          <div className="files" />
         </div>
       );
     } else {
@@ -80,6 +81,7 @@ export default class ChatWindow extends Component {
             handleChange={this.handleChange}
             toogleEmojiState={this.toogleEmojiState}
           />
+          <div className="files" />
         </div>
       );
     }
