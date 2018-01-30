@@ -38,7 +38,7 @@ export default class ChatWindow extends Component {
   handleEmojiClick = (n, e) => {
     let emoji = jsemoji.replace_colons(`:${e.name}:`);
     this.setState({
-    text: this.state.text + emoji
+      text: this.state.text + emoji
     });
   }
 
@@ -65,11 +65,7 @@ export default class ChatWindow extends Component {
             toogleEmojiState={this.toogleEmojiState}
             handleEmojiClick={this.handleEmojiClick}
           />
-          <div className="files">
-            <h4>File #1</h4>
-            <h4>File #2</h4>
-            <h4>File #3</h4>
-          </div>
+          <div className="files" />
         </div>
       );
     } else {
@@ -85,11 +81,7 @@ export default class ChatWindow extends Component {
             handleChange={this.handleChange}
             toogleEmojiState={this.toogleEmojiState}
           />
-          <div className="files">
-            <h4>File #1</h4>
-            <h4>File #2</h4>
-            <h4>File #3</h4>
-          </div>
+          <div className="files" />
         </div>
       );
     }
