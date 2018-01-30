@@ -8,7 +8,7 @@ export default function Message(props) {
       {
         items.map(item => (
           <li className="message" key={item.id}>
-            <img src={require('../../public/avatar.png')} className="avatar" />
+            <img src={require('../../public/cat-avatar-small.png')} className="avatar" />
             <p className="message-body"> {item.text}</p>
           </li>
         ))
