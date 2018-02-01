@@ -45,7 +45,7 @@ ul {
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 85vh;
   overflow-y: scroll;
 }
 

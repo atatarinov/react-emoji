@@ -12,6 +12,7 @@ jsemoji.img_set = 'emojione';
 // set the storage location for all emojis
 jsemoji.img_sets.emojione.path = 'https://cdn.jsdelivr.net/emojione/assets/3.0/png/32/';
 
+
 export default class ChatWindow extends Component {
   state = {
     items: [],
