@@ -118,14 +118,13 @@ ul {
   margin: 10px;
   padding-left:10px;
   font-family: Consolas;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 .message-body {
   font-size: 18px;
   margin: 5px 0 0 5px;
   font-family: Arial, Helvetica, sans-serif;
+  word-wrap: break-word;
 }
 
 .posted-time {
