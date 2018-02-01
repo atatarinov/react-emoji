@@ -1,7 +1,7 @@
 {
   "name": "react-emoji",
   "version": "1.0.0",
-  "description": "",
+  "description": "Emoji chat app in React sample",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,6 @@
   "dependencies": {
     "emoji-js": "^3.4.0",
     "emoji-picker-react": "^2.0.1",
-    "emoji-picker-textfield": "0.0.13",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
     "react": "^16.2.0",

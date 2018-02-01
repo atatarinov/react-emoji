@@ -31,7 +31,7 @@ ul {
 .files {
   flex: 0 0 22%;
   height: 100vh;
-  border-left: 0.5px solid #f7f7f7;
+  border-left: 1px solid #EAEAEB;
 }
 
 .files h4 {
@@ -124,9 +124,14 @@ ul {
 
 .message-body {
   font-size: 18px;
-  margin-left: 10px;
-  margin-top: 15px;
+  margin: 5px 0 0 5px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.posted-time {
+  opacity: 0.5;
+  font-weight: lighter;
+  margin: 0 0 0 5px;
 }
 
 .avatar {
@@ -144,6 +149,13 @@ ul {
 .emoji-table:hover {
   opacity: 0.9;
 }
+
+.posted-time {
+  opacity: 0.5;
+  font-weight: lighter;
+  margin: 0 0 0 5px;
+}
+
 
 /* @media(max-width: 992px) {
   .container { width: 700px; }
